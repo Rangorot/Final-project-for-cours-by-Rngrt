@@ -11,7 +11,6 @@ class LoginPage(BasePage):
     def should_be_login_url(self):
         login_url = self.browser.current_url
         assert '/login/' in login_url, 'Not a login page'
-        #assert login_url == 'http://selenium1py.pythonanywhere.com/en-gb/accounts/login/', 'Not a login page'
 
     def should_be_login_form(self):
         assert self.is_element_present(*LoginPageLocators.LOGIN_FORM_LINK), 'Not a form for log in'
